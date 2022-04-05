@@ -227,7 +227,8 @@ class _HomePage extends State<HomePage> {
                       Padding(
                         padding: const EdgeInsets.only(right: 110),
                         child: Text(
-                            'This really cool. The view always amazes me \n when i look at it. Its really very beautiful'),
+                            'This really cool. The view always amazes me when i look at it. Its really very beautiful',
+                            textAlign: TextAlign.justify,),
                       ),
                       SizedBox(
                         height: 16,
@@ -404,7 +405,8 @@ class _HomePage extends State<HomePage> {
                       Padding(
                         padding: const EdgeInsets.only(right: 110),
                         child: Text(
-                            'This really cool. The view always amazes me \n when i look at it. Its really very beautiful'),
+                            'This really cool. The view always amazes me when i look at it. Its really very beautiful',
+                            textAlign: TextAlign.justify,),
                       ),
                       SizedBox(
                         height: 16,
@@ -459,6 +461,7 @@ class _HomePage extends State<HomePage> {
                     ],
                   ),
                 ),
+                SizedBox(height: 30),
               ],
             ),
           ),
@@ -466,45 +469,48 @@ class _HomePage extends State<HomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Colors.grey),
-              title: Text(
+              label:
                 'Home',
-                style: TextStyle(color: Colors.grey),
+                // style: TextStyle(color: Colors.grey),
               ),
-              backgroundColor: Colors.white),
+              // backgroundColor: Colors.white),
           BottomNavigationBarItem(
               icon: Icon(Icons.store, color: Colors.grey),
-              title: Text(
+              label: 
                 'Marketpalce',
-                style: TextStyle(color: Colors.grey),
+                // style: TextStyle(color: Colors.grey),
               ),
-              backgroundColor: Colors.white),
+              // backgroundColor: Colors.white),
           BottomNavigationBarItem(
               icon: Icon(Icons.person, color: Colors.grey),
-              title: Text(
+              label: 
                 'Profile',
-                style: TextStyle(color: Colors.grey),
+                // style: TextStyle(color: Colors.grey),
               ),
-              backgroundColor: Colors.white),
+              // backgroundColor: Colors.white),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.group,
                 color: Colors.grey,
               ),
-              title: Text(
+              label: 
                 'Grup',
-                style: TextStyle(color: Colors.grey),
+                // style: TextStyle(color: Colors.grey),
               ),
-              backgroundColor: Colors.white),
+              // backgroundColor: Colors.white),
           BottomNavigationBarItem(
               icon: Icon(Icons.notifications, color: Colors.grey),
-              title: Text(
+              label: 
                 'Permberitahuan',
-                style: TextStyle(color: Colors.grey),
+                // style: TextStyle(color: Colors.grey),
               ),
-              backgroundColor: Colors.white),
+              // backgroundColor: Colors.white),
         ],
         onTap: (index) {
           setState(() {
